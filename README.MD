@@ -76,12 +76,12 @@ El script de php es muy sencillo. Es una objeto que toma los argumentos pasados 
 php
 
 /**
- * @var string Primer argumento recibido del script
+ * @var string $url Primer argumento recibido del script
  */
 $url = $argv[1];
 
 /**
- * @var string Segundo argumento recibido del script
+ * @var string $output Segundo argumento recibido del script
  */
 
 $output = $argv[2];
@@ -93,3 +93,12 @@ $output = $argv[2];
 $exporter = new Exporter($url, $output);
 $exporter->export();
 ``` 
+
+La ejecución final del script de bash sería así:
+
+```bash
+bash
+exporter -u https://pokeapi.co/api/v2/pokemon/pikachu -o pikachu.xlsx
+```
+
+El script podría tener más validaciones. Por ejemplo, se podría filtrar que el argumento pasado por -o fuera siempre un archivo con extensión admitida por excel (csv, excel).

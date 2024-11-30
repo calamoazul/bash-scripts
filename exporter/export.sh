@@ -4,10 +4,10 @@
 
 function help()
 {
-    help="Exportador a excel [-u url] [-o output] [-h Menú de ayuda]
-    -u: Url de la API a la que gestionar recursos
-    -o: Ruta absoluta donde quieras crear el excel
-    -h: Mostrar menú de ayuda"
+    help="Exportador a excel [-u url] [-o output] [-h Menú de ayuda]\n
+    -u: Url de la API a la que gestionar recursos\n
+    -o: Ruta absoluta donde quieras crear el excel\n
+    -h: Mostrar menú de ayuda\n"
 
     echo -e $help
 }
